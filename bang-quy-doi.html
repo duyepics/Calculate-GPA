@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng Quy Đổi Điểm</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#F8F9FA] min-h-screen font-sans text-gray-900">
+    <div id="app-navbar"></div>
+    <div class="max-w-4xl mx-auto space-y-8">
+
+        <header class="text-center md:text-left space-y-2">
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">
+                BẢNG QUY ĐỔI ĐIỂM CTUT
+            </h1>
+            <p class="text-gray-500 text-base md:text-lg">
+                Tham khảo cách quy đổi điểm từ hệ 10 sang hệ 4, điểm chữ và xếp loại học lực.
+            </p>
+        </header>
+        <div class="space-y-8">
+            <div class="bg-white rounded-xl p-6 text-sm text-gray-800 border border-gray-200 shadow-sm">
+                <h3 class="font-semibold text-base mb-4 text-gray-900">Bảng quy đổi điểm hệ 10 → Điểm chữ & Xếp loại
+                    (CTUT)</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 py-3 px-4 font-bold text-gray-900">Loại</th>
+                                <th class="border border-gray-300 py-3 px-4 font-bold text-gray-900">Điểm hệ số 10</th>
+                                <th class="border border-gray-300 py-3 px-4 font-bold text-gray-900">Điểm chữ</th>
+                                <th class="border border-gray-300 py-3 px-4 font-bold text-gray-900">Xếp loại</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 font-semibold" rowspan="8">a) Loại đạt
+                                    (tích lũy)</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">9,5 - 10</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-green-600">A+
+                                </td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center" rowspan="2">Giỏi</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">8,5 - 9,4</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-green-600">A
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">8,0 - 8,4</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-blue-600">B+
+                                </td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center" rowspan="2">Khá</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">7,0 - 7,9</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-blue-600">B
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">6,5 - 6,9</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-yellow-600">
+                                    C+</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center" rowspan="2">Trung bình</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">5,5 - 6,4</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-yellow-600">C
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">5,0 - 5,4</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-orange-600">
+                                    D+</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center" rowspan="2">Trung bình yếu
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">4,0 - 4,9</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-orange-600">D
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 font-semibold">b) Loại không đạt</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">0,0 - 3,9</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-red-600">F
+                                </td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">Kém</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl p-6 text-sm text-gray-800 border border-gray-200 shadow-sm">
+                <p class="font-semibold mb-4 text-base text-gray-900">Bảng quy đổi điểm hệ 4 → Điểm chữ (CTUT)</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 py-3 px-4 font-bold text-gray-900 text-center">Điểm số
+                                    (4)</th>
+                                <th class="border border-gray-300 py-3 px-4 font-bold text-gray-900 text-center">Điểm
+                                    chữ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">4.0</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-green-600">A+
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">3.8</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-green-600">A
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">3.5</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-blue-600">B+
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">3.0</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-blue-600">B
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">2.5</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-yellow-600">
+                                    C+</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">2.0</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-yellow-600">C
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">1.5</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-orange-600">
+                                    D+</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">1.0</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-orange-600">D
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 py-2.5 px-4 text-center">0.0</td>
+                                <td class="border border-gray-300 py-2.5 px-4 text-center font-medium text-red-600">F
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
