@@ -79,12 +79,12 @@ const getClassification = (gpa4) => {
 
 // --- App Functions ---
 
-const createEmptySubject = (idx = 0) => ({
-  id: crypto.randomUUID(),
-  name: ``,
-  credits: 3,
-  midTerm: 0,
-  finalTerm: 0,
+const createEmptySubject = () => ({
+    id: crypto.randomUUID(),
+    name: "",
+    credits: "", // Để trống thay vì 3
+    midTerm: "", // Để trống thay vì 0
+    finalTerm: "", // Để trống thay vì 0
 });
 
 const renderSubjects = () => {
