@@ -134,7 +134,7 @@ const generateForm = () => {
   subjects = [];
   for (let i = 0; i < count; i++) {
     const sub = createEmptySubject();
-    sub.name = `Môn ${i + 1}`;
+    
     subjects.push(sub);
   }
   renderSubjects();
@@ -188,6 +188,37 @@ if (btnGenerate) {
   btnCalculate.addEventListener('click', calculate);
   subjectList.addEventListener('input', handleInput);
   subjectList.addEventListener('click', handleClick);
+
+
+  // THÊM MỚI: Bắt sự kiện phím Enter
+  subjectList.addEventListener('keydown', (e) => {
+      // Chỉ xử lý khi bấm Enter và đang đứng ở trong các ô nhập liệu
+      if (e.key === 'Enter' && e.target.classList.contains('input-field')) {
+          e.preventDefault(); // Ngăn trình duyệt tự động submit hoặc scroll
+          
+          // Lấy tất cả các ô nhập liệu trên màn hình
+          const inputs = Array.from(subjectList.querySelectorAll('.input-field'));
+          const index = inputs.indexOf(e.target);
+          
+          if (index > -1) {
+              // Nếu chưa phải là ô cuối cùng -> Nhảy sang ô tiếp theo
+              if (index < inputs.length - 1) {
+                  inputs[index + 1].focus();
+              } 
+              // Nếu là ô cuối cùng (Cuối kỳ) -> Thêm dòng mới và nhảy xuống dòng mới
+              else {
+                  btnAddSubject.click();
+                  // Đợi HTML vẽ xong dòng mới rồi đưa con trỏ chuột vào ô Tên môn
+                  setTimeout(() => {
+                      const newInputs = subjectList.querySelectorAll('.input-field');
+                      // Lùi lại 4 ô (Tên, Tín chỉ, Giữa kỳ, Cuối kỳ) để trỏ đúng vào ô Tên môn mới
+                      newInputs[newInputs.length - 4].focus(); 
+                  }, 10);
+              }
+          }
+      }
+  });
+  
   generateForm();
 }
 
